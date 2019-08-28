@@ -36,6 +36,7 @@ function App() {
                 designed a set of would you rather questions to help you learn
                 more about yourself and the world around you in a fun way.
               </p>
+              <button></button>
             </Cover>
           )}
         />
