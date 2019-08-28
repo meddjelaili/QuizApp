@@ -2,7 +2,7 @@
   "name": "quiz",
   "version": "0.1.0",
   "private": true,
-  "honepage": "https://meddjelaili.github.io/QuizApp",
+  "homepage": "https://meddjelaili.github.io/QuizApp",
   "dependencies": {
     "@atlaskit/button": "^13.1.6",
     "@atlaskit/css-reset": "^5.0.8",
