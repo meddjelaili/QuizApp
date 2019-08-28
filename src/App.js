@@ -7,7 +7,7 @@ import { ContactUs } from "./pages";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={"/QuizApp"}>
         <Header
           pages={[
             {
@@ -22,13 +22,7 @@ function App() {
             }
           ]}
         />
-
-        <Route
-          path="/contact"
-          exact
-          component={ContactUs}
-          basename={"/QuizApp"}
-        />
+        <Route path="/contact" exact component={ContactUs} />
         <Route
           path="/"
           exact
