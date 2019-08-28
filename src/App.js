@@ -23,7 +23,12 @@ function App() {
           ]}
         />
 
-        <Route path="/contact" exact component={ContactUs} />
+        <Route
+          path="/contact"
+          exact
+          component={ContactUs}
+          basename={"/QuizApp"}
+        />
         <Route
           path="/"
           exact
