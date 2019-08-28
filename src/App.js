@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import { Header, Cover } from "./components";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { ReactComponent as QuestionsSVG } from "./svgs/questions.svg";
+import { ContactUs } from "./pages";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header
+          pages={[
+            {
+              title: "Quizzes",
+              color: "#855dc2",
+              route: "/"
+            },
+            {
+              title: "Contact Us",
+              color: "#3573BC",
+              route: "/contact"
+            }
+          ]}
+        />
+
+        <Route path="/contact" exact component={ContactUs} />
+        <Route
+          path="/"
+          exact
+          render={() => (
+            <Cover Illustration={QuestionsSVG}>
+              <h1>What makes you, You?</h1>
+              <p>
+                Are there things that make you different from everyone else or
+                are you more similar to others than you might think? Ratheron
+                designed a set of would you rather questions to help you learn
+                more about yourself and the world around you in a fun way.
+              </p>
+            </Cover>
+          )}
+        />
+      </Router>
     </div>
   );
 }
